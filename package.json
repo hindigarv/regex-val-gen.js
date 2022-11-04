@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Generate strings from regex",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/hindigarv/regex-val-gen.js/issues"
   },
-  "homepage": "https://github.com/hindigarv/regex-val-gen.js#readme"
+  "homepage": "https://github.com/hindigarv/regex-val-gen.js#readme",
+  "dependencies": {
+    "mocha": "^10.1.0"
+  }
 }
