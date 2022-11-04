@@ -24,7 +24,7 @@
     "url": "https://github.com/hindigarv/regex-val-gen.js/issues"
   },
   "homepage": "https://github.com/hindigarv/regex-val-gen.js#readme",
-  "dependencies": {
+  "devDependencies": {
     "mocha": "^10.1.0"
   }
 }
