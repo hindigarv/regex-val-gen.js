@@ -1,6 +1,14 @@
+function isValidPattern(pattern) {
+    return pattern.startsWith("^") && pattern.endsWith("$");
+}
+
 export function generateValuesFromRegex(pattern) {
     let index = 0;
     let words = [""];
+
+    if (!isValidPattern(pattern)) {
+        return [];
+    }
 
     let getNextOptions = function() {
         let options = []

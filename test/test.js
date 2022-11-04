@@ -43,6 +43,12 @@ describe('generateValuesFromRegex() should generate values for', function () {
         assert.deepStrictEqual(vals.sort(), expectedVals.sort());
     });
 
+});
 
+describe('generateValuesFromRegex() should not generate values for', function () {
+    it('an empty string', function () {
+        const vals = generateValuesFromRegex("")
+        assert.deepStrictEqual(vals, []);
+    });
 
 });
