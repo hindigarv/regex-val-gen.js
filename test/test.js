@@ -3,6 +3,11 @@ import {generateValuesFromRegex} from "../index.js"
 
 
 describe('generateValuesFromRegex() should generate values for', function () {
+    it('an empty pattern ^$', function () {
+        const vals = generateValuesFromRegex("^$")
+        assert.deepStrictEqual(vals, [""]);
+    });
+
     it('a non regex string', function () {
         const vals = generateValuesFromRegex("^test$")
         assert.deepStrictEqual(vals, ["test"]);
@@ -35,7 +40,6 @@ describe('generateValuesFromRegex() should generate values for', function () {
         const expectedVals = ["ade", "abde", "acde", "adf", "abdf", "acdf"]
         assert.deepStrictEqual(vals.sort(), expectedVals.sort());
     });
-
 
     xit('a regex with nested match group', function () {
         const vals = generateValuesFromRegex("^a(b|c|C(x|y))?d$")
