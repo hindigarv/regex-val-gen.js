@@ -1,4 +1,4 @@
-import assert  from 'assert';
+import assert from 'assert';
 import {generateValuesFromRegex} from "../index.js"
 
 
@@ -20,7 +20,29 @@ describe('generateValuesFromRegex() should generate values for', function () {
 
     it('a regex with two match groups', function () {
         const vals = generateValuesFromRegex("^a(b|c)d(e|f)g$")
-        assert.deepStrictEqual(vals, ["abdeg", "acdeg", "abdfg", "acdfg"]);
+        const expectedVals = ["abdeg", "acdeg", "abdfg", "acdfg"]
+        assert.deepStrictEqual(vals.sort(), expectedVals.sort());
     });
+
+    it('a regex with an optional match group', function () {
+        const vals = generateValuesFromRegex("^a(b|c)?d$")
+        const expectedVals = ["ad", "abd", "acd"]
+        assert.deepStrictEqual(vals.sort(), expectedVals.sort());
+    });
+
+    it('a regex with an optional match group and a normal match group', function () {
+        const vals = generateValuesFromRegex("^a(b|c)?d(e|f)$")
+        const expectedVals = ["ade", "abde", "acde", "adf", "abdf", "acdf"]
+        assert.deepStrictEqual(vals.sort(), expectedVals.sort());
+    });
+
+
+    xit('a regex with nested match group', function () {
+        const vals = generateValuesFromRegex("^a(b|c|C(x|y))?d$")
+        const expectedVals = ["ad", "abd", "acd", "aCxd", "aCyd"]
+        assert.deepStrictEqual(vals.sort(), expectedVals.sort());
+    });
+
+
 
 });
