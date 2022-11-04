@@ -1,0 +1,26 @@
+{
+  "name": "regex-val-gen",
+  "version": "0.0.1",
+  "description": "Generate strings from regex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hindigarv/regex-val-gen.js.git"
+  },
+  "keywords": [
+    "regex",
+    "generate",
+    "value",
+    "regular",
+    "expression"
+  ],
+  "author": "hindi.garv.001@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hindigarv/regex-val-gen.js/issues"
+  },
+  "homepage": "https://github.com/hindigarv/regex-val-gen.js#readme"
+}
